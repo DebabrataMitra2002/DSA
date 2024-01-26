@@ -1,30 +1,24 @@
-//#include <bits/stdc++.h>
 #include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
-void swap1(int a,int b)
-{	int temp;
-	temp=a;
-	a=b;
-	b=temp;
-}
-
-
 int partition(int arr[] ,int low ,int high )
 {
 int pivot =arr[low];
 int i=low;
 int j= high;
 while(i<j)
-{
-	while(pivot>=arr[i])
-	i++;
-	while(pivot<arr[j])
-	j++;
-	
+{	
+    while(pivot>=arr[i] && i<= high-1)
+	{i++;
+	}
+	while(arr[j]>pivot && j<=low+1)
+	{
+	j--;
+	}
 	if(i<j)
-	swap1(arr[i],arr[j]);
+	swap(arr[i],arr[j]);
 }
-swap1(arr[j],arr[low]);
+swap(arr[low],arr[j]);
 return j;
 }
 void quickSort(int arr[], int low, int high)
@@ -34,7 +28,6 @@ void quickSort(int arr[], int low, int high)
         // idx is index of pivot element which is at its
         // sorted position
         int idx = partition(arr, low, high);
- 
         // Separately sort elements before
         // partition and after partition
         quickSort(arr, low, idx - 1);
@@ -46,32 +39,20 @@ void printArray(int arr[], int size)
 {
     int i;
     for (i = 0; i < size; i++)
-        cout << arr[i] << " ";
+        {
+            cout << arr[i] << " ";
+        }
     cout << endl;
 }
- 
 // Driver Code
 int main()
 {
-    int arr[] = { 7, 6, 10, 5, 9, 2, 1, 15, 7 };
-    int n = sizeof(arr) / sizeof(arr[0]);
-    quickSort(arr, 0, n - 1);
+    int a[] = { 7, 6, 10, 5, 9, 2, 1, 15, 7 };
+    int n = sizeof(a) / sizeof(a[0]);
+    quickSort(a, 0, n - 1);
     cout << "Sorted array: \n";
-    printArray(arr, n);
+    printArray(a, n);
     return 0;
 }
- 
-//// Driver Code
-//
-//int main()
-//{
-//    int arr[] = { 7, 6, 10, 5, 9, 2, 1, 15, 7 };
-//    int n = sizeof(arr) / sizeof(arr[0]);
-//	for (int i = 0; i < n; i++)
-//        cout << arr[i] << " ";
-//    quickSort(arr, 0, n - 1);
-//    cout << "Sorted array: \n";
-//    for (int i = 0; i < n; i++)
-//        cout << arr[i] << " ";
-//    return 0;
-//}
+// This Code is contributed by Harsh Raghav
+
