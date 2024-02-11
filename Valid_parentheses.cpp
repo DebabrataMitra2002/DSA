@@ -1,7 +1,8 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-bool ValidParenth(string str)
+// function 1: using stack data structure:Time complexity:O(n); space :O(n) 
+bool ValidParenth(string str) 
 {
     stack<char> temp;
     for (int i = 0; i < str.length(); i++)
@@ -26,6 +27,21 @@ else{
     return false;
 }
 }
+//function 2:Time complexity:O(n); space :O(1)
+// bool ValidParenth(string s) {
+//         int i=-1;
+//         for(auto& ch:s){
+//             if(ch=='(' || ch=='{' || ch=='[')
+//                 s[++i]=ch;
+//             else{
+//                 if(i>=0 && ((s[i]=='(' && ch==')') || (s[i]=='{' && ch=='}') || (s[i]=='[' && ch==']')))
+//                     i--;
+//                 else
+//                     return false;
+//             }
+//         }
+//         return i==-1;
+//     }  
 // Driver code:
 int main(){
     string str="((({}[{}])))";
