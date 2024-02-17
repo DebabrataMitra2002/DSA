@@ -1,11 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-// Function to print a substring str[low..high]
-// void printSubStr(string str, int low, int high)
-// {
-//     for (int i = low; i <= high; ++i)
-//         cout << str[i];
-// }
+
 int longestPalSubstr(string str)
 {
     int hi,low;
@@ -20,10 +15,6 @@ int longestPalSubstr(string str)
     
     while(low>=0 && hi<n && str[low]==str[hi])
     {
-        // if(hi-low+1>end){
-        //     start=low;
-        //     end=hi-low+1;
-        // }
         count2++;
         low--;
         hi++;
@@ -35,18 +26,11 @@ int longestPalSubstr(string str)
     
     while(low>=0 && hi<n && str[low]==str[hi])
     {
-        // if(hi-low+1>end){
-        //     start=low;
-        //     end=hi-low+1;
-        // }
         count2++;
         low--;
         hi++;
     } 
-}
-//  cout << "Longest palindrome substring is: ";
-//   printSubStr(str, start, start + end - 1);
- 
+} 
 return count1+count2+n ;
 }
  
