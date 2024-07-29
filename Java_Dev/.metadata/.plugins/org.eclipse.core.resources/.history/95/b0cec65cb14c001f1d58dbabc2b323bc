@@ -1,7 +1,0 @@
-package Jdbc;
-
-public class Student {
-    int id;
-    String name;
-}
-
