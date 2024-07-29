@@ -1,0 +1,13 @@
+package Jdbc;
+
+public class Student {
+    int id;
+    String name;
+	public Student(int id) {
+		
+		this.id = id;
+		
+	}
+    
+}
+

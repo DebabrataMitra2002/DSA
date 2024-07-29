@@ -1,0 +1,45 @@
+package Jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class StudentDAO {
+
+    public Student getStudent(int id) {
+        String url = "jdbc:mysql://localhost:3306/employee";
+        String pass = "debo";
+        String uname = "root";
+        String query = "SELECT NAME FROM info WHERE ID = ?";
+        
+        Student s = new Student();
+        s.id = id;
+
+        try {
+            // Load the MySQL driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error loading driver: " + e);
+        }
+
+        try (Connection con = DriverManager.getConnection(url, uname, pass);
+             PreparedStatement ps = con.prepareStatement(query)) {
+
+            // Set the ID parameter
+            ps.setInt(1, id);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    s.name = rs.getString("NAME");
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query: " + e);
+        }
+
+        return s;
+    }
+}
+

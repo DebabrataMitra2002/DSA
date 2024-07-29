@@ -1,0 +1,12 @@
+package Jdbc;
+
+public class DaoDemo {
+
+	public static void main(String[] args) {
+		StudentDAO obj=new StudentDAO();
+		Student s1 = new Student(4);
+		System.out.println(s1.id +" : "+ s1.name);
+
+	}
+
+}
