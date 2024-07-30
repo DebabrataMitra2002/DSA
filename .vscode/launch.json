@@ -1,8 +1,13 @@
 {
     "configurations": [
-        
         {
-
+            "type": "java",
+            "name": "Regex",
+            "request": "launch",
+            "mainClass": "Regex",
+            "projectName": "Programing_e7cd9a37"
+        },
+        {
             "name": "C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
             "request": "launch",
