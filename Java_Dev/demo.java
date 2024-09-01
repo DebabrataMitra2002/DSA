@@ -19,12 +19,12 @@
 // }
 
 
-class Student
-{
-    int rollno;
-    String name;
-    int markes;
-}
+// class Student
+// {
+//     int rollno;
+//     String name;
+//     int markes;
+// }
 
 public class demo
 {
@@ -116,24 +116,24 @@ public class demo
 // System.out.println();  
 // }
 
-Student s1 = new Student();
-Student s2 = new Student();
-Student s3 = new Student();
-s1.rollno=45;
-s1.name="debo";
-s2.rollno=23;
-s2.name="dola";
-s3.rollno=12;
-s3.name="prio";
-Student students[]=new Student[3];
+// Student s1 = new Student();
+// Student s2 = new Student();
+// Student s3 = new Student();
+// s1.rollno=45;
+// s1.name="debo";
+// s2.rollno=23;
+// s2.name="dola";
+// s3.rollno=12;
+// s3.name="prio";
+// Student students[]=new Student[3];
  
-students[0]=s1;
-students[1]=s2;
-students[2]=s3;
-for (Student student : students) {
-    System.out.println(student.name+" : "+student.rollno);
+// students[0]=s1;
+// students[1]=s2;
+// students[2]=s3;
+// for (Student student : students) {
+//     System.out.println(student.name+" : "+student.rollno);
 
-}
+// }
 
 
 

@@ -35,43 +35,39 @@ Output:
 0
  */
 
-package Practice;
+ package Practice;
 
-import java.util.Scanner;
+ import java.util.Scanner;
+ 
+ public class OperationsBinaryString {
+     public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+         String str = sc.next();
+         System.out.println(OperationsBinaryString.solve(str));
+         sc.close(); // Always close the scanner to avoid resource leaks
+     }
+ 
+     public static int solve(String str) { 
+         if (str == null || str.isEmpty()) {
+             return -1; // Return -1 for invalid input
+         }
+         int res = str.charAt(0) - '0';
+         for (int i = 1; i < str.length();) {
+             char prev = str.charAt(i);
+             i++;
+             if (i < str.length()) {
+                 if (prev == 'A') {
+                     res = res & (str.charAt(i) - '0');
+                 } else if (prev == 'B') {
+                     res = res | (str.charAt(i) - '0');
+                 } else if (prev == 'C') {
+                     res = res ^ (str.charAt(i) - '0');
+                 }
+                 i++;
+             }
+         }
+         return res;
+     }
+ }
 
-public class OperationsBinaryString {
-    public static void main(String[] args) {
-   
-        Scanner sc = new Scanner (System.in);
-    String str = sc.next ();
-    System.out.println (solve (str));
-    }
-
-
-
-    public static int solve(String str)
-    { 
-        if (str == null)
-      return -1;
-    int res = str.charAt (0) - '0';
-    for (int i = 1; i < str.length ();)
-      {
-	char prev = str.charAt (i);
-	  i++;
-	if (prev == 'A')
-	  res = res & (str.charAt (i) - '0');
-	else if (prev == 'B')
-	  res = res | (str.charAt (i) - '0');
-	else
-	    res = res ^ (str.charAt (i) - '0');
-	  i++;
-      }
-    return res;
-
-}
-
-
-
-
-    }
-
+ 

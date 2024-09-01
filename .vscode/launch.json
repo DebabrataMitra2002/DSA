@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "OperationsBinaryString",
+            "request": "launch",
+            "mainClass": "Practice.OperationsBinaryString",
+            "projectName": "Programing_e7cd9a37"
+        },
+        {
+            "type": "java",
+            "name": "RatcountHouse",
+            "request": "launch",
+            "mainClass": "Practice.RatcountHouse",
+            "projectName": "Programing_e7cd9a37"
+        },
+        {
+            "type": "java",
             "name": "Regex",
             "request": "launch",
             "mainClass": "Regex",
