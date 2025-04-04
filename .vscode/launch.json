@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "smallest",
+            "request": "launch",
+            "mainClass": "Practice.smallest",
+            "projectName": "Programing_e7cd9a37"
+        },
+        {
+            "type": "java",
             "name": "OperationsBinaryString",
             "request": "launch",
             "mainClass": "Practice.OperationsBinaryString",

@@ -28,7 +28,7 @@ public class BFS {
     
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
-        System.out.println("Enter the number of Edges:");
+        System.out.println("Enter the number of Nodes:");
         int V=sc.nextInt();
         List<List<Integer>> adj=new LinkedList<>();
         for(int i =0;i<V;i++){
